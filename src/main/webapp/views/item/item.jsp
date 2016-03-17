@@ -8,7 +8,7 @@
     <title>Add New Item</title>
 </head>
 <body>
-<form action="ItemServlet.do" method="post">
+<form action="ItemServlet" method="post">
     <fieldset>
         <div>
             <label for="itemId">Item ID</label>

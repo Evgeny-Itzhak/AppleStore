@@ -8,34 +8,32 @@
 </head>
 <body>
 <center>
-    <%--<form action="/ItemServlet" method="GET">--%>
-        <table border="2">
-            <thead>
+    <table border="2">
+        <thead>
+        <tr>
+            <th>Item ID</th>
+            <th>Model</th>
+            <th>Memory</th>
+            <th>Color</th>
+            <th colspan="2">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <c:forEach items="${items}" var="item">
             <tr>
-                <th>Item ID</th>
-                <th>Model</th>
-                <th>Memory</th>
-                <th>Color</th>
-                <th colspan="2">Action</th>
+                <td><c:out value="${item.itemId}"/></td>
+                <td><c:out value="${item.model}"/></td>
+                <td><c:out value="${item.memory}"/></td>
+                <td><c:out value="${item.color}"/></td>
+                <td><a href="ItemServlet?action=edit&itemId=<c:out value="${item.itemId}"/>">Update</a></td>
+                <td><a href="ItemServlet?action=delete&itemId=<c:out value="${item.itemId}"/>">Delete</a></td>
             </tr>
-            </thead>
-            <tbody>
-            <c:forEach items="${items}" var="item">
-                <tr>
-                    <td><c:out value ="${item.itemId}"/></td>
-                    <td><c:out value="${item.model}"/></td>
-                    <td><c:out value="${item.memory}"/></td>
-                    <td><c:out value="${item.color}"/></td>
-                    <td><a href="ItemServlet.do?action=edit&itemId=<c:out value="${item.itemId}"/>">Update</a></td>
-                    <td><a href="ItemServlet.do?action=delete&itemId=<c:out value="${item.itemId}"/>">Delete</a></td>
-                </tr>
-            </c:forEach>
-            </tbody>
-        </table>
-        <p>
-            <a href="ItemServlet.do?action=insert">Add Item</a>
-        </p>
-    <%--</form>--%>
+        </c:forEach>
+        </tbody>
+    </table>
+    <p>
+        <a href="ItemServlet?action=insert">Add Item</a>
+    </p>
 </center>
 </body>
 </html>

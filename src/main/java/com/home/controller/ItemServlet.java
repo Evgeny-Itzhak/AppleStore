@@ -32,6 +32,10 @@ public class ItemServlet extends HttpServlet {
         String forward = "";
         String action = request.getParameter("action");
 
+        if (action == null) {
+            action = LIST_ITEM;
+        }
+
         if (action.equalsIgnoreCase("delete")) {
             forward = LIST_ITEM;
             int itemId = Integer.parseInt(request.getParameter("itemId"));
