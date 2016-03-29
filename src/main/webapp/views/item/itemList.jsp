@@ -5,10 +5,24 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Show All Items</title>
+    <style>
+        body {
+            background: url(/images/appleStoreInside.jpg) no-repeat;
+            -moz-background-size: cover; /* Firefox 3.6+ */
+            -webkit-background-size: cover; /* Safari 3.1+ и Chrome 4.0+ */
+            -o-background-size: cover; /* Opera 9.6+ */
+            background-size: cover; /* Современные браузеры */
+        }
+    </style>
 </head>
 <body>
-<center>
-    <table border="2">
+<div align="center">
+    <p>
+        <a href="ItemServlet"><img src="/images/appleStoreLogo.png"/></a>
+    </p>
+    <a></a>
+    <a style="text-decoration-color: lightcyan"><h1>Your bucket</h1></a>
+    <table border="2" style="background-color: lightskyblue">
         <thead>
         <tr>
             <th>Item ID</th>
@@ -31,9 +45,21 @@
         </c:forEach>
         </tbody>
     </table>
-    <p>
-        <a href="ItemServlet?action=insert">Add Item</a>
-    </p>
-</center>
+    <table>
+        <tr>
+            <td>
+                <p>
+                    <a href="ItemServlet?action=insert"><img src="/images/bucket.png"/></a>
+                </p>
+            </td>
+
+            <td>
+                <p>
+                    <a style="color: lightskyblue" href="ItemServlet?action=insert"><h1>Add Item</h1></a>
+                </p>
+            </td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>

@@ -24,21 +24,21 @@
             <tr>
                 <td>Model:</td>
                 <td>
-                    <c:choose>
-                        <c:when test="${not empty item.itemId}">
-                            <option value="">--Select model</option>
-                            <option value="iPod">iPod</option>
-                            <option value="iWatch">iWatch</option>
-                            <option value="iPhone">iPhone</option>
-                            <option value="iPad">iPad</option>
-                            <option value="iMac">iMac</option>
-                            <c:if test="${item.model eq 'iPod'}"><option selected value="iPod">iPod</option></c:if>
-                            <c:if test="${item.model eq 'iWatch'}"><option selected value="iWatch">iWatch</option></c:if>
-                            <c:if test="${item.model eq 'iPhone'}"><option selected value="iPhone">iPhone</option></c:if>
-                            <c:if test="${item.model eq 'iPad'}"><option selected value="iPad">iPad</option></c:if>
-                            <c:if test="${item.model eq 'iMac'}"><option selected value="iMac">iMac</option></c:if>
-                        </c:when>
-                        <c:otherwise>
+                    <%--<c:choose>--%>
+                        <%--<c:when test="${not empty item.itemId}">--%>
+                            <%--<option value="">--Select model</option>--%>
+                            <%--<option value="iPod">iPod</option>--%>
+                            <%--<option value="iWatch">iWatch</option>--%>
+                            <%--<option value="iPhone">iPhone</option>--%>
+                            <%--<option value="iPad">iPad</option>--%>
+                            <%--<option value="iMac">iMac</option>--%>
+                            <%--<c:if test="${item.model eq 'iPod'}"><option selected value="iPod">iPod</option></c:if>--%>
+                            <%--<c:if test="${item.model eq 'iWatch'}"><option selected value="iWatch">iWatch</option></c:if>--%>
+                            <%--<c:if test="${item.model eq 'iPhone'}"><option selected value="iPhone">iPhone</option></c:if>--%>
+                            <%--<c:if test="${item.model eq 'iPad'}"><option selected value="iPad">iPad</option></c:if>--%>
+                            <%--<c:if test="${item.model eq 'iMac'}"><option selected value="iMac">iMac</option></c:if>--%>
+                        <%--</c:when>--%>
+                        <%--<c:otherwise>--%>
                             <select name="model">
                                 <option value="">--Select model</option>
                                 <option value="iPod">iPod</option>
@@ -47,8 +47,8 @@
                                 <option value="iPad">iPad</option>
                                 <option value="iMac">iMac</option>
                             </select>
-                        </c:otherwise>
-                    </c:choose>
+                        <%--</c:otherwise>--%>
+                    <%--</c:choose>--%>
 
                 </td>
                 <td colspan="2" style="color: red; font-size: small;">
